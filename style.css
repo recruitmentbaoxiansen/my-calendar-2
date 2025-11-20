@@ -118,7 +118,7 @@ header .nav-gif:hover {
 }
 
 .days li.active::before {
-  background: #a7e7ff;
+  background: #1967b5;
 }
 
 .days li:not(.active):hover::before {
