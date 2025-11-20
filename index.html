@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Minimal Calendar for Notion</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <!-- ปุ่มเลื่อนซ้าย -->
+      <img src="assets/header-left.gif" alt="Previous Month" class="nav-gif" id="prevGif">
+
+      <!-- ชื่อเดือน -->
+      <div class="month-nav">
+        <p class="current-date"></p>
+      </div>
+
+      <!-- ปุ่มเลื่อนขวา -->
+      <img src="assets/header-right.gif" alt="Next Month" class="nav-gif" id="nextGif">
+    </header>
+
+    <div class="calendar">
+      <ul class="weeks">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thu</li>
+        <li>Fri</li>
+        <li>Sat</li>
+      </ul>
+      <ul class="days"></ul>
+    </div>
+  </div>
+</body>
+</html>
