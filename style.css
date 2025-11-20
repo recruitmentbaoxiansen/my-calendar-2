@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  width: 350px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  transform-origin: top left;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  color: #ffffff;
+}
+
+/* ปุ่ม GIF ซ้าย-ขวา */
+header .nav-gif {
+  height: 46px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+header .nav-gif:hover {
+  transform: scale(1.1);
+}
+
+/* เดือนตรงกลาง */
+.month-nav {
+  flex: 1;
+  text-align: center;
+}
+
+.month-nav .current-date {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Calendar Section */
+.calendar {
+  padding: 5px 0 0 0;
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+}
+
+.calendar .weeks li {
+  width: calc(100% / 7);
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.calendar .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0;
+  height: 260px;
+  align-items: start;
+}
+
+.calendar .days li {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 40px;
+  position: relative;
+  color: #ffffff;
+}
+
+.days li.inactive {
+  color: #aaa;
+}
+
+.days li.active {
+  color: #fff;
+}
+
+.days li::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  height: 36px;
+  width: 36px;
+  z-index: -1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+  background: #a7e7ff;
+}
+
+.days li:not(.active):hover::before {
+  background: #f2f2f2;
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    width: 100%;
+  }
+  .month-nav .current-date {
+    font-size: 1.1rem;
+  }
+  .calendar .days {
+    height: 240px;
+  }
+}
